@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    environment:
+      - DB_TYPE=sqlite
+      - GENERIC_TIMEZONE=America/Bogota
+      - N8N_ENCRYPTION_KEY=localtestkey123456
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./n8n:/home/node/.n8n
